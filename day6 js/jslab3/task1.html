@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task1</title>
+</head>
+<body>
+
+<script>
+  var text = "Welcome to JS";
+        var newWindow = window.open("", "", "width=400,height=600");
+
+        for (var i = 0; i < text.length; i++) {
+            setTimeout(function(index) {
+                return function() {
+                    newWindow.document.write(text.charAt(index));
+
+                    if (index === text.length - 1) {
+                        setTimeout(function() {
+                            newWindow.close();
+                        }, 500);
+                    }
+                };
+            }(i), i * 200); 
+        }
+    
+   
+</script>
+
+</body>
+</html>

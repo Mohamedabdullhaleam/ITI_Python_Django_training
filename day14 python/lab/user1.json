@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "New York",
+    "region": "New York",
+    "country": "United States of America",
+    "lat": 40.71,
+    "lon": -74.01,
+    "tz_id": "America/New_York",
+    "localtime_epoch": 1695690561,
+    "localtime": "2023-09-25 21:09"
+  },
+  "current": {
+    "last_updated_epoch": 1695690000,
+    "last_updated": "2023-09-25 21:00",
+    "temp_c": 16.1,
+    "temp_f": 61.0,
+    "is_day": 0,
+    "condition": {
+      "text": "Overcast",
+      "icon": "//cdn.weatherapi.com/weather/64x64/night/122.png",
+      "code": 1009
+    },
+    "wind_mph": 9.4,
+    "wind_kph": 15.1,
+    "wind_degree": 50,
+    "wind_dir": "NE",
+    "pressure_mb": 1023.0,
+    "pressure_in": 30.21,
+    "precip_mm": 1.11,
+    "precip_in": 0.04,
+    "humidity": 81,
+    "cloud": 100,
+    "feelslike_c": 16.1,
+    "feelslike_f": 61.0,
+    "vis_km": 16.0,
+    "vis_miles": 9.0,
+    "uv": 1.0,
+    "gust_mph": 24.6,
+    "gust_kph": 39.6
+  }
+}

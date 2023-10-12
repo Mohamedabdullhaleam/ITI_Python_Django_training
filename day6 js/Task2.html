@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script>
+      var students = [
+        { fname: 'ali', age: 22, grade: 100 },
+        { fname: 'nora', age: 20, grade: 90 },
+        { fname: 'nada', age: 25, grade: 75 },
+        { fname: 'heba', age: 19, grade: 50 },
+        { fname: 'bassem', age: 21, grade: 40 },
+      ];
+      students.forEach((element) => {
+        printitems(element);
+      });
+      document.write(
+        `<h2 style="color: red;"> Students with grade greater than 80 </h2>`
+      );
+      students.forEach((element) => {
+        if (element.grade > 80) printitems(element);
+      });
+      document.write(
+        `<h2 style="color: red;"> Students Names orderd ascendingly </h2>`
+      );
+      students.sort(function (a, b) {
+        var fnameA = a.fname.toLowerCase();
+        var fnameB = b.fname.toLowerCase();
+        if (fnameA < fnameB) return -1;
+        if (fnameA > fnameB) return 1;
+        return 0;
+      });
+      students.forEach((element) => {
+        printitems(element);
+      });
+      function printitems(item) {
+        document.write(`<h2> ${item.fname} : ${item.age} : ${item.grade}</h2>`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

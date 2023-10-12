@@ -1,0 +1,44 @@
+body{
+    background-image: url(images/backgr.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+table{
+    background-color: rgb(43, 130, 188);
+    position: absolute;
+    border-radius: 20px;
+    border:0;
+    outline:0;
+    border-bottom:2px solid black;
+    top:150px;
+    left:200px;
+    height:420px;
+    width:280px;
+   
+}   
+#sub{
+    width:120px;
+    height: 22px;
+    border-style: none;
+    border-radius:8px;
+    background-color: rgb(239, 241, 235); 
+    border: none;
+}
+.left{
+    display:inline-block;
+    padding:10px;
+    background-repeat:no-repeat;
+    padding-left:25px;
+
+}
+.in{
+    background-color :rgb(239, 245, 241);
+    border:none;
+    width: 200px;
+    border-radius: 5px;
+    height:20px;
+    
+}
+in:active, in:focus {
+    border-bottom: 2px solid rgb(1, 1, 17);
+}

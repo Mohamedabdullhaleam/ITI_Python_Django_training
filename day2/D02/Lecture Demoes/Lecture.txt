@@ -1,0 +1,27 @@
+Form 
+collect Data 
+
+Method  get || post 
+
+
+
+action     
+
+<input   type=/>
+
+type  :
+  text 
+password 
+radio 
+checkbox
+submit 
+reset 
+email 
+number
+tel 
+date 
+button 
+file 
+
+
+<select>

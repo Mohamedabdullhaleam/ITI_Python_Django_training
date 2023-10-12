@@ -1,0 +1,18 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      var counter = 1;
+      func();
+      function func() {
+        var element = document.createElement('p');
+        element.innerHTML = `<p style="border:4px double red; display: inline-block;">${counter}<\p>`;
+        document.body.append(element);
+        document.title = counter++;
+        setTimeout(() => {
+          func();
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

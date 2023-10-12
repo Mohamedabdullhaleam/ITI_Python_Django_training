@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slideshow</title>
+    <style>
+      .container {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .slideshow-container {
+        display: block;
+        max-width: 700px;
+        overflow: hidden;
+        position: relative;
+      }
+      .buttons-container {
+        display: flex;
+        max-width: 700px;
+      }
+
+      .slide {
+        display: none;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 5px;
+        background-color: #4424a2;
+        border: none;
+        border-radius: 5%;
+        width: 100%;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slideshow-container">
+        <img class="slide" src="./Images/02.jpg" alt="Image 1" />
+        <img class="slide" src="./Images/03.jpg" alt="Image 2" />
+        <img class="slide" src="./Images/07.jpg" alt="Image 3" />
+        <img class="slide" src="./Images/08.jpg" alt="Image 5" />
+        <img class="slide" src="./Images/09.jpg" alt="Image 6" />
+        <img class="slide" src="./Images/10.jpg" alt="Image 7" />
+        <img class="slide" src="./Images/11.jpg" alt="Image 8" />
+        <img class="slide" src="./Images/12.jpg" alt="Image 9" />
+        <img class="slide" src="./Images/13.jpg" alt="Image 10" />
+        <img class="slide" src="./Images/14.jpg" alt="Image 11" />
+      </div>
+      <div class="buttons-container">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="startBtn">Start Slideshow</button>
+        <button id="stopBtn">Stop Slideshow</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.getElementsByClassName('slide');
+        let currentSlide = 0;
+        let slideshowInterval;
+
+        function showSlide(index) {
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = i === index ? 'block' : 'none';
+          }
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        function startSlideshow() {
+          slideshowInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds
+        }
+
+        function stopSlideshow() {
+          clearInterval(slideshowInterval);
+        }
+
+        showSlide(currentSlide);
+
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document
+          .getElementById('startBtn')
+          .addEventListener('click', startSlideshow);
+        document
+          .getElementById('stopBtn')
+          .addEventListener('click', stopSlideshow);
+      });
+      //Task 4
+      document.body.style.background = 'linear-gradient(45deg, #fff, #000)';
+      document.body.style.backgroundSize = "150% 150%";
+    </script>
+  </body>
+</html>

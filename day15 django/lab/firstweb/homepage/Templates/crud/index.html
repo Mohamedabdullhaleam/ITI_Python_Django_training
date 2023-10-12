@@ -1,0 +1,32 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} all courses  {% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
+
+
+{% block body %}
+<a href="{% url 'products.create' %}" class=" btn btn-dark"> Add new course  </a>
+<h1 align="center" > HOME </h1>
+<!--                <h1> Django Template engine -&ndash;&gt; jinja2 engine </h1>-->
+{% for std in students %}
+
+<div style="display:inline-block">
+    <div class="card" style="width: 18rem;">
+        <img alt="..." class="card-img-top" height="300" src="{{std.get_image_url}}"
+             width="300">
+        <div class="card-body">
+            <h5 class="card-title">{{std.name}}</h5>
+            <a class="btn btn-primary" href="{{std.get_show_url}}" style="padding: 10px; ">Show</a>
+            <a class="btn btn-danger" href="{{std.get_delete_url}}" style="padding: 10px;">Delete</a>
+            <a  class="btn btn-warning" href="{{std.get_edit_url}}" style="padding: 10px;" >  Edit</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

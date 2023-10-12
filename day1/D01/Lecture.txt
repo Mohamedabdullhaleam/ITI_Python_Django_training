@@ -1,0 +1,154 @@
+HTML >> HYper Text makup Language 
+
+makup Language  ==>> not oop 
+
+interpretation ==>> interpreter (brower)
+
+predefined tags 
+
+<p>iti</p>
+
+<img/>
+
+<abdallah> 
+
+why to learn HTML 
+
+- Static web Page 
+
+2 sides in web 
+
+1- client 
+
+
+2- server
+
+
+http:// www.fb/home.html.com    // URI 
+
+
+www.fb/home.html.com
+
+protocole 
+
+
+HTTP : Hyper text Transefer protocole 
+
+ftp 
+
+www: World wide web 
+
+LAN : Local AREA network 
+
+WAN : Wide Area Network 
+
+===================================HTML 
+
+HTML4 
+2004 
+
+1992 
+
+2015   HTML5 
+
+<b>
+<u>
+
+html tags
+paired Tags / Couple tags 
+
+<p> content </p>
+
+2- paired tag with attribute 
+
+<p  aling="center"></p>
+
+3- self closing tag 
+<img />
+
+
+4- self closing tag  with attr
+<img border="2" />
+========================================
+isnot case sensetive 
+
+<h1></h1>
+<H1></H1>
+
+
+w3c 
+small letters 
+
+<html>
+<head>
+<title>
+</title>
+</head>
+
+
+<body></body>
+
+</html>
+
+
+
+==========================
+
+Text 
+Image 
+Table 
+Form 
+
+
+==============
+List 
+1- oredered  List 
+2- Unordered List 
+3- Descriptive List 
+4- Mixed List 
+
+
+
+                            js  <dt>
+                                 javascript  <dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

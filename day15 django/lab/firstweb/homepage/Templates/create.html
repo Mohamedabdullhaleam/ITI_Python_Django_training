@@ -1,0 +1,41 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} Add new courses  {% endblock %}
+
+<!--enctype="multipart/form-data"-->
+{% block content %}
+<div class="bg-light">
+    <h1> Add new Student </h1>
+    <form  method="post">
+        {% csrf_token %} ///
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+                <input aria-describedby="emailHelp" class="form-control" name='name' type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">price</label>
+            <input aria-describedby="emailHelp" class="form-control" name="price" type="number">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">description</label>
+            <input type="text" name="description" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="text" name="image" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">NO.items</label>
+            <input aria-describedby="emailHelp" class="form-control" name="no_items" type="number">
+        </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    {% endblock %}
+
+
+    {% block body %}
+    <!--                <h1> Django Template engine -&ndash;&gt; jinja2 engine </h1>-->
+
+
+    {% endblock %}

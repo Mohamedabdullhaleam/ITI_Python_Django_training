@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      const modal = window.open('popup.html', 'child', 'width=500,height=300');
+      setTimeout(() => {
+        const element = modal.document.getElementById('popup');
+        var textToDisplay = "Hello, I'm kamilia you?";
+        var currentIndex = 0;
+        typeText();
+        function typeText() {
+          if (currentIndex < textToDisplay.length) {
+            element.textContent += textToDisplay[currentIndex];
+            currentIndex++;
+            setTimeout(typeText, 100);
+          } else {
+            setTimeout(() => {
+              modal.close();
+            }, 2000);
+          }
+        }
+      }, 100);
+      modal.addEventListener('load', function () {});
+    </script>
+  </head>
+  <body></body>
+</html>

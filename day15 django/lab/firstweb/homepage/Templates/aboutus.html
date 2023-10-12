@@ -1,0 +1,23 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+
+{% block body %}
+
+    <div class="grad">
+    <p ><pre class="txt">
+     The Information Technology Institute (ITI), 
+ first established in 1993 under the affiliation of
+ the Egyptian Cabinet's Information and Decision
+ Support Center, with a mission to develop IT 
+ caliber to cater for the government's decision
+ support functions,as well as the development of 
+ the ICT industry in Egypt.</pre></p>
+    </div> 
+    <table class="imgs" width="100%" height="300px" align="center">
+        <tr>
+            <td><img class="aboutusimg" src="{% static 'homepage/images/iti.jpg '%}" width="200px height=400px"alt="not found" "/></td>
+            <td><img class="aboutusimg" src="{% static 'homepage/images/وزارة-الاتصالات-وتكنولوجيا-المعلومات-3.jpg '%}" width="200px height=200px" alt="not found"/></td>
+            <td><img class="aboutusimg" src="{% static 'homepage/images/Creativa-logo.jpg '%}" width="200px height=200px" alt="not found"/></td>
+        </tr>
+    </table>
+{% endblock %}

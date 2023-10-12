@@ -1,0 +1,69 @@
+static web page 
+
+ECMA
+
+Ecma Script  5 
+
+ECMA 6  
+
+ECMA 7 
+
+ECMA Next 
+
+===========================
+cross platform  ==> run on any os 
+
+Embeding Language isn't stand Alone Language  (inside js )
+
+var x=2; // number
+var x=""  // string 
+
+losely type 
+
+; end of each line 
+
+case sensetive 
+
+ var a != var A;
+online!= Onine
+
+
+// comment for one one line 
+
+
+/*
+
+comment for mullti line 
+
+*/
+
+
+where to write js code 
+1- External script 
+
+2- internal script (inside HTML)
+
+3- Event handeler 
+
+
+- run using interpreter 
+
+var for ; 
+
+var _for 
+var for12;
+var for_student 
+var f4
+var $for 
+
+
+
+
+
+
+
+
+
+
+
+

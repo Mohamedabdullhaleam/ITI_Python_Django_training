@@ -1,0 +1,28 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} posts info  {% endblock %}
+
+{% block content %}
+
+
+    <div style="display:inline-block">
+        <div class="card" style="width: 18rem;">
+            <img src="{{post.get_image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">title:{{post.title}}</h5>
+                <h5 class="card-title">body:{{post.body}}</h5>
+                <p> author: {{post.author}}</p>
+                <p>ca:{{post.created_at}}</p>
+                <a href="{% url 'posts.index'%}" class="btn btn-primary">return to main posts</a>
+            </div>
+        </div>
+    </div>
+
+<h1> this laptop in the {{posts.title}} category </h1>
+
+{% for p in post.author.posts.all %}
+{% if p.id != post.id %}
+    <li><a href="{{p.get_show_url}}">{{p.title}}</a></li>
+{% endif %}
+{% endfor %}
+{%endblock%}

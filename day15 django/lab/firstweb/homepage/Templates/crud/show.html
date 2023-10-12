@@ -1,0 +1,30 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} course info  {% endblock %}
+
+{% block content %}
+
+
+    <div style="display:inline-block">
+        <div class="card" style="width: 18rem;">
+            <img src="{{students.get_image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{students.name}}</h5>
+                <h5 class="card-title">category:{{students.categ}}</h5>
+                <p> price: {{students.price}}</p>
+                <p>{{students.description}}</p>
+                <a href="{% url 'products.index'%}" class="btn btn-primary">return to main page</a>
+            </div>
+        </div>
+    </div>
+
+<h1> this laptop in the {{students.categ}} category </h1>
+
+{% for cat in students.categ.categories.all %}
+{% if cat.id != students.id %}
+    <li><a href="{{cat.get_show_url}}">{{cat.name}}</a></li>
+{% endif %}
+
+{% endfor %}
+
+{%endblock%}

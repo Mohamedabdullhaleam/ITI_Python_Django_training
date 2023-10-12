@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <style>
+      body {
+        font-size: larger;
+      }
+      #organize tr td:first-child {
+        background-color: antiquewhite;
+        color: blue;
+        font-family: 'Monotype Corsiva';
+      }
+      table:nth-child(2) td,
+      table:nth-child(2) th {
+        border: solid rgb(241, 17, 129) 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table id="organize">
+        <tr>
+          <td>name</td>
+          <td>
+            <input type="text" name="nameTxt" />
+            <span style="color: red; visibility: hidden">
+              name is required
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>age</td>
+          <td>
+            <input type="text" name="ageTxt" /><span
+              style="color: red; visibility: hidden"
+            >
+              number 25:50</span
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>grade</td>
+          <td><input type="text" name="gradeTxt" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <select name="deptVal">
+              <option>SD</option>
+              <option>OS</option>
+              <option>EL</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="add student" id="btn" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <table id="stdTable"></table>
+    <label id="lbl1"></label>
+
+    <script>
+      document.getElementById('btn').addEventListener('click', function () {
+        // Get the input values
+        var name = document.getElementsByName('nameTxt')[0].value;
+        var age = document.getElementsByName('ageTxt')[0].value;
+        var grade = document.getElementsByName('gradeTxt')[0].value;
+        var dept = document.getElementsByName('deptVal')[0].value;
+
+        // Create a new row in the table
+        var table = document.getElementById('stdTable');
+        var newRow = table.insertRow();
+
+        // Create cells for the new row
+        var nameCell = newRow.insertCell(0);
+        var ageCell = newRow.insertCell(1);
+        var gradeCell = newRow.insertCell(2);
+        var deptCell = newRow.insertCell(3);
+
+        // Put Data in the Cells
+        nameCell.innerHTML = name;
+        ageCell.innerHTML = age;
+        gradeCell.innerHTML = grade;
+        deptCell.innerHTML = dept;
+
+        // Clear the input fields
+        document.getElementsByName('nameTxt')[0].value = '';
+        document.getElementsByName('ageTxt')[0].value = '';
+        document.getElementsByName('gradeTxt')[0].value = '';
+        document.getElementsByName('deptVal')[0].selectedIndex = 0;
+      });
+    </script>
+  </body>
+</html>

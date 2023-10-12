@@ -1,0 +1,8 @@
+my_queue2 = Queue("lo",0,0,6)
+my_queue2.insert(3)
+my_queue2.insert(2)
+my_queue2.insert(8)
+my_queue2.insert(5)
+my_queue2.insert(4)
+my_queue2.load_data("lo")
+print(my_queue2.queue)

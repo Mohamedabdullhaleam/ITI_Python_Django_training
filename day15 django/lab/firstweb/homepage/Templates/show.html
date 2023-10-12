@@ -1,0 +1,21 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} course info  {% endblock %}
+
+{% block content %}
+
+
+    <div style="display:inline-block">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'homepage/images/' %}{{ student.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{student.name}}</h5>
+                <p>{{student.price}}</p>
+                <p>{{student.discription}}</p>
+                <a href="{% url 'HOME'%}" class="btn btn-primary">return to main page</a>
+            </div>
+        </div>
+    </div>
+
+
+{%endblock%}

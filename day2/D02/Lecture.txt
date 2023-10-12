@@ -1,0 +1,57 @@
+Text
+Image 
+Tables 
+Forms 
+
+============================
+Hyper Text Markup Language 
+
+Link 
+
+source >> destenation 
+
+1- External Link 
+2- Internal Link 
+3- Named Anchor Link 
+
+4-Mail Link 
+
+==================
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+</body>
+</html>
+
+
+=============
+ abslute path 
+
+relative path 
+
+================
+to :  ahmed@iti.com
+
+cc: mhmd@iti.com  // carpon copy 
+
+bcc : ali@iti.com  // blind carpon copy 
+
+subject :
+
+body :
+
+
+
+
+
+
+
+
+
+
+
+
+

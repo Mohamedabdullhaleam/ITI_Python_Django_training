@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom selector</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Selectors</h1>
+
+<p>Selectors are used to fetch page elements inside an Array</p>
+
+<ul id="list1">
+    <li class="a">
+        <code><i>tag</i></code>: Selects all elements of the &lt;tag&gt; type
+    </li>
+    <li class="a">
+        <code><i>.className</i></code>: Chooses all elements with the <i>className</i> class applied
+    </li>
+    <li class="b">
+        <code>#identifier</code>: Picks the element with the id of <i>identifier</i>
+    </li>
+    <li class="b">
+        <code><i>tag.className</i></code>: Selects all &lt;tag&gt; elements with the <i>className</i> class applied
+    </li>
+</ul>
+
+<h1>Css Hierarchy Selectors</h1>
+
+<p>
+    To select elements based on their position in the document tree, use the
+    Hierarchy Selectors.
+</p>
+<p>
+    The Hierarchy Selectors work by examining the position of target elements
+    relative to other elements:
+</p>
+<ol id="list2">
+    <li>
+        <code>parent > child</code>: Selects "child" elements that are direct descendants of the "parent"
+    </li>
+    <li>
+        <code>ancestor descendant</code>: Picks "descendant" elements as long as they have an "ancestor" element somewhere above them
+    </li>
+    <li>
+        <code>prev + next</code>: Selects the "next" element if it is immediately preceded by a "prev" element
+    </li>
+    <li>
+        <code>prev ~ siblings</code>: Chooses all "siblings" elements that come after a "prev" element
+    </li>
+</ol>
+
+<div id="example" name="exampleDiv">
+    <a><p class="a">This is paragraph 1</p></a>
+    <p id="para2">This is paragraph 2</p>
+    <p class="bGrey fontBlue">
+    This is paragraph 3 <span> this is span 1</span>
+    </p>
+    <span> <p id="para4">This is paragraph 4</p></span>
+</div>
+
+<img src="1.jpg" name="firstImage" />
+<img src="10.jpg" id="secondImg" />
+
+<h3>HTML Table 1</h3>
+<table class="bGrey">
+    <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+    </tr>
+    <tr>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+    </tr>
+    <tr>
+        <td>Cell 5</td>
+        <td>Cell 6</td>
+    </tr>
+</table>
+    <h3>HTML Table 2</h3>
+    <table class="bPink">
+    <tr>
+        <td><a href="http://www.iti.gov.eg"> ITI </a></td>
+        <td>Cell 2</td>
+    </tr>
+    <tr>
+        <td><a href="http://www.google.com" id="googleAnchor"> google </a></td>
+        <td>Cell 4</td>
+    </tr>
+    <tr>
+        <td><a href="next.html"> MyPage </a></td>
+        <td>Cell 6</td>
+    </tr>
+</table>
+
+<h3>HTML Form</h3>
+<h3>HTML Form</h3>
+<form id="Userback"name="basicForm" class="Grey fontBlue">
+    <fieldset>
+        <legend>Filters Form</legend>
+        <input type="text" value="Type your name here" />
+        <br />
+        <input type="text" value="Type your age" />
+        <br />
+        <input type="button" value="Send" />
+    </fieldset>
+</form>
+<form id="UserData" name="regForm" action="Data.aspx">
+    <input type="checkbox" name="hoppy" value="1" checked />Running
+    <input type="checkbox" name="hoppy" value="2" />Swimming
+    <input type="checkbox" name="hoppy" value="3" />Reading<br />
+    <select name="City" class="bPink">
+    <option value="1">Mansoura</option>
+    <option value="2">Cairo</option>
+    <option value="3">Alex</option>
+    </select>
+    <input type="submit" value="Send" />
+</form>
+
+<br />
+<br />
+<br />    
+</body>
+</html>

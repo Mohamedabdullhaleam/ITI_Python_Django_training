@@ -1,0 +1,52 @@
+{% extends 'layout/base.html'  %}
+{% load static %}
+{% block title %} all courses  {% endblock %}
+
+
+{% block content %}
+<!--    <table width="90%" height="90%" align="center">-->
+<!--        <tr>-->
+<!--            <td><a href="asus-rog.html" target="_blank"><img class="dimen" src="{% static 'homepage/images/Asus ROG.png'%}" alt="not found"></a></td>-->
+<!--            <td><a href="asus-strix.html" target="_blank"><img class="dimen" src="{% static 'homepage/images/ASUS_ROG_Strix.png'%}" alt="not found"></a></td>-->
+<!--            <td><a href="asus-tuf.html" target="_blank"><img class="dimen" src="{% static 'homepage/images/ASUS_TUF_Gaming_F15png.png'%}" alt="not found"></a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th><a href="asus-rog.html" target="_blank">ASUS ROG ZEPHYRUS</a></th>-->
+<!--            <th><a href="asus-strix.html" target="_blank">ASUS ROG STRIX</a></th>-->
+<!--            <th><a href="asus-tuf.html" target="_blank">ASUS TUF GAMING F15</a></th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><a href="hpvictus.html" target="_blank"><img  src="{% static 'homepage/images/HP_Victus_16.png'%}" alt="not found" height="350px" width="350px"></a></td>-->
+<!--            <td><a href="lenovgaming3.html" target="_blank"><img class="dimen" src="{% static 'homepage/images/laptop-lenovo-gaming.png'%}" alt="not found"height="400px" width="400px"></a></td>-->
+<!--            <td><a href="lenovolegon5.html" target="_blank"><img class="dimen" src="{% static 'homepage/images/Legion_5_Pro_16.png'%}" alt="not found"></a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th><a href="hpvictus.html" target="_blank">HP VICTUS</a></th>-->
+<!--            <th><a href="lenovgaming3.html" target="_blank">LENOVO GAMING 3</a></th>-->
+<!--            <th><a href="lenovolegon5.html" target="_blank">LENOVO LEGON 5 PRO</a></th>-->
+<!--        </tr>-->
+<!--    </tabel>-->
+{% endblock %}
+
+
+{% block body %}
+<a href="{% url 'prod.create'%}" class=" btn btn-dark"> Add new Course  </a>
+<h1 align="center" > HOME </h1>
+<!--                <h1> Django Template engine -&ndash;&gt; jinja2 engine </h1>-->
+{% for std in students %}
+
+<div style="display:inline-block">
+    <div class="card" style="width: 18rem;">
+        <img alt="..." class="card-img-top" height="300" src="{% static 'homepage/images/'|add:std.image %}"
+             width="300">
+        <div class="card-body">
+            <h5 class="card-title">{{std.name}}</h5>
+            <a class="btn btn-primary" href="{% url 'laptops.show' std.id %}" style="padding: 10px; ">Show</a>
+            <a class="btn btn-danger" href="{std.url get_delete_url }" style="padding: 10px;">Delete</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

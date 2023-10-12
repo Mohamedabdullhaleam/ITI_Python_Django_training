@@ -1,0 +1,68 @@
+CSS 
+
+static web page 
+
+===========
+problems in html 
+
+1- redunduncy 
+<p align="center">iti</p>
+
+2- maintability 
+
+3- bordercolor for image && max size font ==7 && center for img 
+
+4- Mixing between table and design 
+
+
+====================================
+selector {
+	prop:value;
+	prop:value;
+	prop:value;
+
+	}
+
+=======================================
+where to write CSS 
+1- external sheet 
+2- internal Style inside <head> inside <style>
+3- inline style >> attribute style 
+
+==================
+p{
+	text-align:right;
+}
+
+=======================================
+tag name selector
+ID selector
+Class Selector 
+Group Selector 
+Attribute Selector 
+Universal Selector 
+Pesudo Class Selector 
+==================
+
+block vs inline 
+block 
+width ✔
+
+height✔
+
+padding  ✔
+
+margin ✔
+
+
+
+=== inline 
+
+width ❌
+height ❌
+
+  padding  ✔
+
+margin   (left and right)✔
+
+

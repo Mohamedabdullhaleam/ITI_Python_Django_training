@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h2 {
+            color: red; 
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="output"></div>
+
+    <h2 >Students with High Grades Greater than 80</h2>
+    <div id="high"></div>
+
+    <h2>Students Sorted by Names</h2>
+    <div id="sort"></div>
+
+    <script>
+        var students = [
+            { fname: 'ali', age: 22, grade: 100 },
+            { fname: 'nora', age: 20, grade: 90 },
+            { fname: 'nada', age: 25, grade: 75 },
+            { fname: 'heba', age: 19, grade: 50 },
+            { fname: 'bassem', age: 21, grade: 40 }
+        ];
+
+        function displayData(id, data) {
+            document.getElementById(id).innerHTML = data.map(student => `
+                <p>${student.fname}: ${student.age}: ${student.grade}</p>
+            `).join('');
+        }
+
+        displayData('output', students);
+         highGrades = students.filter(student => student.grade > 80);
+        displayData('high', highGrades);
+        sortedStudents = [...students].sort((a, b) => a.fname.localeCompare(b.fname));
+        displayData('sort', sortedStudents);
+    </script>
+</body>
+</html>

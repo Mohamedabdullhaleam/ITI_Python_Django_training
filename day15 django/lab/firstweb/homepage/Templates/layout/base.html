@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" href="{% static 'homepage/images/online-shop.png'%}"/>
+    <link rel="stylesheet" href="{% static 'homepage/bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'homepage/css/Mstyle.css' %}"/>
+
+<!--    <script src="{% static 'homepage/js/script.js' %}"></script>-->
+</head>
+<body>
+    <ul>
+        <a href="{% url 'HOME' %}"><li>Home</li></a>
+        <li></li><li></li><li></li><li></li><li></li><li></li> <li></li><li></li>
+        <a href="" target="_blank"> <li class="right">Products  </li></a>
+        <a href="{% url 'contactus' %}" target="_blank"> <li class="right">Contact Us</li></a>
+        <a href="{% url 'aboutus' %}"  target="_blank"> <li class="right">About Us  </li></a>
+       {% if user.id %}
+            <a href="{% url 'logout' %}"  target="_blank"> <li class="right">Logout </li></a>
+        {% else %}
+            <a href="{% url 'login' %}"  target="_blank"> <li class="right">Log In </li></a>
+            <a href="{% url 'login' %}"  target="_blank"> <li class="right">register </li></a>
+        {% endif %}
+    </ul>
+
+    <div class="container"  >
+        <div class=" font-monospace" >
+            {% block content %}
+            {%endblock%}
+            </br> <br>
+            <div style=" font-family: Courier; font-style: italic;">
+                </div>
+                    {% block body %}
+
+                    {% endblock %}
+                </div>
+            </div>
+</body>
+</html>
